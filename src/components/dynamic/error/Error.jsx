@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Error.module.scss';
+import styles from 'components/dynamic/error/Error.module.scss';
 
 function Error() {
   return (

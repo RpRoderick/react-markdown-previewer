@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Home.module.scss';
-import MarkdownEditor from '../markdownEditor/MarkdownEditor';
+import styles from 'components/structural/home/Home.module.scss';
+import MarkdownEditor from 'components/structural/markdownEditor/MarkdownEditor';
 
 function Home() {
   return (
