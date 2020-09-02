@@ -1,0 +1,46 @@
+//breakpoints values
+$zero: 0;
+$sm: 33.99em;
+$md: 34em;
+$xmd: 49.99em;
+$lg: 50em;
+$xlg: 72.99em;
+$wide: 73em;
+$xwide: 2000em;
+
+//breakpoints maps
+$breakpoints: (
+	small: (  //321-543px
+		min: $zero,
+		max: $sm,
+	),
+	medium: (  //544px-799px
+		min: $md,
+		max: $xmd,
+	),
+	large: (  //800px-1167px
+		min: $lg,
+		max: $xlg,
+	),
+	wide: (  //1168px+
+		min: $wide,
+		max: $xwide,
+	),
+);
+
+//Breakpoint functions and mixins
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+@mixin breakpoint($name) {
+	@if not map-has-key($breakpoints, $name) {
+		@warn 'Warning: `#{$name}` is not a valid breakpoint name.';
+	} @else {
+		@media (min-width: map-deep-get($breakpoints, $name, 'min')) and (max-width: map-deep-get($breakpoints, $name, 'max')) {
+			@content;
+		}
+	}
+}

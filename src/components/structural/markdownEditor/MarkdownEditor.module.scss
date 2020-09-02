@@ -1,3 +1,25 @@
-.home {
-    background-color: red;
+@import 'styles/global/breakpoints.scss';
+@import 'styles/global/variables.scss';
+
+.markdown_editor_button_area {
+    display: flex;
+    flex: 1;
+}
+
+.markdown_editor_preview_area {
+    display: flex;
+    min-height: 33.33vh;
+    max-height: 33.33vh;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color: $color_background_main;
+    border-radius: $border_radius_main;
+    box-shadow: $box_shadow_main;
+}
+
+.markdown_editor_text_area {
+    display: flex;
+    flex: 1;
+    border-radius: $border_radius_main;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-// import styles from 'component/structural//markdownEditor/MarkdownEditor.module.scss';
+import styles from 'components/structural/markdownEditor/MarkdownEditor.module.scss';
 import ButtonArea from 'components/structural/buttonArea/ButtonArea';
 import PreviewArea from 'components/structural/previewArea/PreviewArea';
 import TextArea from 'components/structural/textArea/TextArea';
@@ -84,17 +84,17 @@ class MarkdownEditor extends React.Component {
     const markdown = this.state.markdown;
     return (
       <>
-        <div className="markdown_editor_button_area">
+        <div className={styles.markdown_editor_button_area}>
           <ButtonArea 
             clearMarkdown={this.clearMarkdown}
             resetMarkdown={this.resetMarkdown} />
         </div>
-        <div className="markdown_editor_text_area">
+        <div className={styles.markdown_editor_text_area}>
           <TextArea 
             updateMarkdown={this.updateMarkdown}
             markdown={markdown} />
         </div>
-        <div className="markdown_editor_preview_area">
+        <div className={styles.markdown_editor_preview_area}>
           <PreviewArea 
             markdown={markdown}  
           />
