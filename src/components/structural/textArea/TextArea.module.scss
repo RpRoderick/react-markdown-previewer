@@ -7,6 +7,11 @@
   flex-direction: column;
   justify-content: center;
 
+  .textarea {
+    margin: 3.125rem 0 1.5625rem;
+    text-align: center;
+  }
+
   .editor {
     display: flex;
     min-height: 33.33vh;

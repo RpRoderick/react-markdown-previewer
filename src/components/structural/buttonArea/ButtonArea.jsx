@@ -5,10 +5,10 @@ import { PropTypes } from 'prop-types';
 function ButtonArea(props) {
   return (
     <div className={styles.button_container}>
-      <button className={styles.button} onClick={() => props.clearMarkdown()}>
+      <button type="button" className={styles.button} onClick={() => props.clearMarkdown()}>
         Clear State
       </button>
-      <button className={styles.button} onClick={() => props.resetMarkdown()}>
+      <button type="button" className={styles.button} onClick={() => props.resetMarkdown()}>
         Reset State
       </button>
     </div>
