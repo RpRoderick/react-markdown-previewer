@@ -1,0 +1,18 @@
+//colors
+$color_background_main: #e0e5ec;
+$color_box_shadow_white: #ffffff;
+$color_box_shadow_grey: #a3b1c6;
+
+//box-shadows
+$box_shadow_main: -9px -9px 16px $color_box_shadow_white, 9px 9px 16px $color_box_shadow_grey;
+$box_shadow_main_inverted: inset 9px 9px 16px $color_box_shadow_grey, inset -9px -9px 16px $color_box_shadow_white;
+
+//borders
+$border_radius_main: 2px;
+
+//font
+$font_size_small: 1.25em;
+$font_size_medium: 1.5em;
+$font_size_large: 1.5em;
+$font_size_wide: 1.75em;
+

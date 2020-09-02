@@ -1,1 +1,15 @@
-// @import '../../components/dynamic/error/Error.style.scss';
+@import 'styles/global/breakpoints.scss';
+@import 'styles/global/variables.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: Helvetica;
+  background-color: $color_background_main;
+  justify-content: center;
+  align-items: center;
+}
