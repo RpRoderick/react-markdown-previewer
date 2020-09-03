@@ -5,9 +5,10 @@ import { PropTypes } from 'prop-types';
 function TextArea(props) {
   return (
     <div className={styles.text_area_container}>
-      <textarea 
+      <label className={styles.textarea} htmlFor="textarea">Enter Markdown here:</label>
+      <textarea
+        id="textarea"
         className={styles.editor}
-        placeholder="Type Markdown Here!"
         value={props.markdown}
         onChange={(e) => {
           props.updateMarkdown(e.target.value);}}>
