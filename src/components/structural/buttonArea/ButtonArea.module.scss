@@ -65,6 +65,10 @@
 
     &:focus {
       box-shadow: $box_shadow_main_inverted;
+
+      &:hover {
+        transform: none;
+      }
     }
   }
 }
