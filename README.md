@@ -1,6 +1,6 @@
 # <u>React Markdown Previewer</u>
 
-## Try it out!<a href="https://rproderick.github.io/react-markdown-previewer/" target="_blank">Here</a>
+## Try it out! <a href="https://rproderick.github.io/react-markdown-previewer/" target="_blank">Here</a>
 
 # **<span style="color:blue">Basics:</span>**
 
