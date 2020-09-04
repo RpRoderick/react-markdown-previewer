@@ -8,8 +8,20 @@
   justify-content: center;
 
   .textarea {
-    margin: 3.125rem 0 1.5625rem;
+    margin: 0 0 1.5625rem;
     text-align: center;
+
+    @include breakpoint(medium) {
+      margin: 3.125rem 0 1.5625rem;
+    }
+
+    @include breakpoint(large) {
+      margin: 3.125rem 0 1.5625rem;
+    }
+
+    @include breakpoint(wide) {
+      margin: 3.125rem 0 1.5625rem;
+    }
   }
 
   .editor {
@@ -19,6 +31,7 @@
     flex: 1;
     font-size: $font_size_small;
     text-align: center;
+    resize: none;
     outline: none;
     justify-content: center;
     align-items: center;

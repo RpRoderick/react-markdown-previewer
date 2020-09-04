@@ -1,7 +1,11 @@
+@import 'styles/global/breakpoints.scss';
+@import 'styles/global/variables.scss';
+
 .preview_area_container {
   display: flex;
   min-width: 0;
   flex: 1;
+  text-align: center;
   justify-content: center;
   align-items: center;
 
@@ -12,5 +16,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint(medium) {
+      font-size: $font_size_medium;
+    }
+
+    @include breakpoint(large) {
+      font-size: $font_size_large;
+    }
+
+    @include breakpoint(wide) {
+      font-size: $font_size_wide;
+    }
+
+    code {
+      white-space: pre-wrap !important;
+    }
   }
 }
