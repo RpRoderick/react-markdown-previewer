@@ -14,17 +14,10 @@
 
 ~~Crossed Out~~
 
-Single line code: \`<div></div>\`
+Single line code
 
-\`\`\`
-Multi-line code:
+Multi-line code
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
-}
-\`\`\`
 1. Numbered lists
 2. are easy
 3. to make
