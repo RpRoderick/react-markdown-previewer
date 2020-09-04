@@ -1,6 +1,6 @@
-# <u>React Markdown Previewer</u>
+# React Markdown Previewer
 
-## Try it out: <a href="https://rproderick.github.io/react-markdown-previewer/" target="_blank"><u>Here</u></a>
+## Try it out: <a href="https://rproderick.github.io/react-markdown-previewer/" target="_blank">Here</a>
 
 # **<span style="color:blue">Basics:</span>**
 
@@ -11,8 +11,6 @@
 **_Bold and Italicized Text_**
 
 > Block Quote
-
-<u>Underlined (sort of - it's actually html)</u>
 
 ~~Crossed Out~~
 
