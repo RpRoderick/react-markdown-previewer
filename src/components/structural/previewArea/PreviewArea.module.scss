@@ -12,8 +12,10 @@
   .preview {
     display: flex;
     max-width: 90%;
+    min-height: 15vh;
     flex: 1;
     flex-direction: column;
+    margin: auto;
     justify-content: center;
     align-items: center;
 
