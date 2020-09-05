@@ -2,8 +2,8 @@
   display: flex;
   min-width: 90vw;
   max-width: 90vw;
-  min-height: 90vh;
-  max-height: 90vh;
+  height: 100vh;
   flex-direction: column;
   row-gap: 25px;
+  grid-row-gap: 25px;
 }
