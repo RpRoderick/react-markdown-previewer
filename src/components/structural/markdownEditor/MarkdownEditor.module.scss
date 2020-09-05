@@ -4,6 +4,7 @@
 .markdown_editor_button_area {
     display: flex;
     flex: 1;
+    margin: 10px 0;
 }
 
 .markdown_editor_preview_area {
@@ -12,6 +13,7 @@
     max-height: 33.33vh;
     flex: 1;
     flex-direction: column;
+    margin: 10px 0;
     overflow-y: scroll;
     background-color: $color_background_main;
     border-radius: $border_radius_main;
@@ -21,5 +23,6 @@
 .markdown_editor_text_area {
     display: flex;
     flex: 1;
+    margin: 10px 0;
     border-radius: $border_radius_main;
 }
