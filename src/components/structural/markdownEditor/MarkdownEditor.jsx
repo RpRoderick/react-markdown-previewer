@@ -53,9 +53,32 @@ class MarkdownEditor extends React.Component {
     this.updateMarkdown = this.updateMarkdown.bind(this);
     this.clearMarkdown = this.clearMarkdown.bind(this);
     this.resetMarkdown = this.resetMarkdown.bind(this);
+    this.copyButton = this.copyButton.bind(this);
+    this.copyToClipBoard = this.copyToClipBoard.bind(this);
     this.state = {
       markdown: placeholder
     };
+  }
+
+  copyToClipBoard (id) {
+    document.getElementById(id).select();
+    document.execCommand("copy");
+  }
+
+  copyButton() {
+    const currentState = this.state.markdown;
+    const copied = "COPIED!";
+    const notCopied = "Not copied (Because there isn't anything there!)"
+    if (currentState.length > 0 && currentState !== copied && currentState !== notCopied) {
+      this.copyToClipBoard("textarea");
+      this.setState({
+        markdown: copied
+      })
+    } else {
+      this.setState({
+        markdown: notCopied
+      })   
+    }
   }
   
   updateMarkdown(markdown) {
@@ -70,7 +93,7 @@ class MarkdownEditor extends React.Component {
     });
   }
   
-    resetMarkdown() {
+  resetMarkdown() {
     this.setState({ 
       markdown: placeholder 
     });
@@ -88,7 +111,8 @@ class MarkdownEditor extends React.Component {
         <div className={styles.markdown_editor_text_area}>
           <TextArea 
             updateMarkdown={this.updateMarkdown}
-            markdown={markdown} />
+            markdown={markdown} 
+            copyButton={this.copyButton} />
         </div>
         <div className={styles.markdown_editor_preview_area}>
           <PreviewArea 

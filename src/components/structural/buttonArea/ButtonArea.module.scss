@@ -34,24 +34,21 @@
       margin: 0 0 0 5%;
     }
 
+    &:hover {
+      box-shadow: $box_shadow_main_inverted;
+      transform: scale(1.1);
+    }
+
     @include breakpoint(medium) {
       min-height: 50px;
       max-height: 50px;
       font-size: $font_size_medium;
-
-      &:hover {
-        transform: scale(1.1);
-      }
     }
   
     @include breakpoint(large) {
       min-height: 50px;
       max-height: 50px;
       font-size: $font_size_large;
-
-      &:hover {
-        transform: scale(1.1);
-      }
 
       &:last-of-type {
         margin: 0 0 0 25%;
@@ -63,20 +60,8 @@
       max-height: 50px;
       font-size: $font_size_wide;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-
       &:last-of-type {
         margin: 0 0 0 25%;
-      }
-    }
-
-    &:focus {
-      box-shadow: $box_shadow_main_inverted;
-
-      &:hover {
-        transform: none;
       }
     }
   }
