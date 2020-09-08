@@ -25,6 +25,7 @@
   .editor {
     display: flex;
     min-height: 50vh;
+    max-height: 50vh;
     flex: 1;
     font-size: $font_size_small;
     text-align: center;

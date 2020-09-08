@@ -131,7 +131,7 @@ class MarkdownEditor extends React.Component {
     const markdown = this.state.markdown;
     const message = this.state.message;
     return (
-      <>
+      <div className={styles.markdown_editor_container}>
         <div className={styles.markdown_editor_button_area}>
           <ButtonArea 
             clearMarkdown={this.clearMarkdown}
@@ -150,7 +150,7 @@ class MarkdownEditor extends React.Component {
               markdown={markdown} />
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

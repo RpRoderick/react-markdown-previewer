@@ -1,8 +1,7 @@
+@import 'styles/global/variables.scss';
+
 .home {
   display: flex;
-  min-width: 90vw;
-  max-width: 90vw;
-  height: 100vh;
-  flex-direction: column;
-  margin: 5% 0 0;
+  flex: 1;
+  margin: $margin_main;
 }

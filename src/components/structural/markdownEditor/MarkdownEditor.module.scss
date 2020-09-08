@@ -1,58 +1,60 @@
 @import 'styles/global/breakpoints.scss';
 @import 'styles/global/variables.scss';
 
-.markdown_editor_button_area {
-    display: flex;
-    margin: $margin_main 0;
-}
-
-.markdown_editor_field_container {
+.markdown_editor_container {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: 0 0 $margin_main;
 
-    @include breakpoint(medium) {
-        max-height: 100%;   
-        flex-direction: row; 
-    }
-
-    @include breakpoint(large) {
-        max-height: 100%;   
-        flex-direction: row;    
-    }
-
-    @include breakpoint(wide) {
-        max-height: 100%;   
-        flex-direction: row;    
-    }
-
-    .markdown_editor_text_area {
+    .markdown_editor_button_area {
         display: flex;
-        flex: 1;
-        border-radius: $border_radius_main;
+        margin: 0 0 $margin_main;
     }
 
-    .markdown_editor_preview_area {
+    .markdown_editor_field_container {
         display: flex;
         flex: 1;
         flex-direction: column;
-        margin: $margin_main 0;
-        overflow-y: scroll;
-        background-color: $color_background_main;
-        border-radius: $border_radius_button;
-        box-shadow: $box_shadow_main;
 
         @include breakpoint(medium) {
-            margin: 0 0 0 $margin_main;
+            flex-direction: row; 
         }
 
         @include breakpoint(large) {
-            margin: 0 0 0 $margin_main;
+            flex-direction: row;    
         }
-    
+
         @include breakpoint(wide) {
-            margin: 0 0 0 $margin_main;
+            flex-direction: row;    
+        }
+
+        .markdown_editor_text_area {
+            display: flex;
+            flex: 1;
+            margin: 0 0 $margin_main;
+            border-radius: $border_radius_main;
+        }
+
+        .markdown_editor_preview_area {
+            display: flex;
+            flex: 1;
+            margin: 0 0 $margin_main;
+            overflow-y: scroll;
+            background-color: $color_background_main;
+            border-radius: $border_radius_button;
+            box-shadow: $box_shadow_main;
+
+            @include breakpoint(medium) {
+                margin: 0 0 0 $margin_main;
+            }
+
+            @include breakpoint(large) {
+                margin: 0 0 0 $margin_main;
+            }
+        
+            @include breakpoint(wide) {
+                margin: 0 0 0 $margin_main;
+            }
         }
     }
 }

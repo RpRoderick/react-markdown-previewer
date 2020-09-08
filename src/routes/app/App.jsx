@@ -7,12 +7,10 @@ import 'styles/global/App.scss';
 function App() {
   return (
     <Router>
-      <main>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route default component={Error} />
         </Switch>
-      </main>
     </Router>
   );
 }
