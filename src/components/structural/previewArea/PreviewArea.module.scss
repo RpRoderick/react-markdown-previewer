@@ -19,14 +19,20 @@
     word-break: break-word;
 
     @include breakpoint(medium) {
+      min-height: calc(100vh - 150px);
+      max-height: calc(100vh - 150px);
       font-size: $font_size_medium;
     }
 
     @include breakpoint(large) {
+      min-height: calc(100vh - 150px);
+      max-height: calc(100vh - 150px);
       font-size: $font_size_large;
     }
 
     @include breakpoint(wide) {
+      min-height: calc(100vh - 150px);
+      max-height: calc(100vh - 150px);
       font-size: $font_size_wide;
     }
 

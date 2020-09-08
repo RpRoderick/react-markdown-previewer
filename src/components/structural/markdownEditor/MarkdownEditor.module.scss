@@ -33,6 +33,18 @@
             flex: 1;
             margin: 0 0 $margin_main;
             border-radius: $border_radius_main;
+
+            @include breakpoint(medium) {
+                margin: 0;
+            }
+    
+            @include breakpoint(large) {
+                margin: 0;
+            }
+    
+            @include breakpoint(wide) {
+                margin: 0;
+            }
         }
 
         .markdown_editor_preview_area {
