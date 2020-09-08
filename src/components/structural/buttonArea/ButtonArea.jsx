@@ -6,10 +6,10 @@ function ButtonArea(props) {
   return (
     <div className={styles.button_container}>
       <button type="button" className={styles.button} onClick={() => props.clearMarkdown()}>
-        Clear State
+        Clear
       </button>
       <button type="button" className={styles.button} onClick={() => props.resetMarkdown()}>
-        Reset State
+        Reset
       </button>
     </div>
   );

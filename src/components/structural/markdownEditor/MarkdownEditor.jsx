@@ -68,11 +68,16 @@ class MarkdownEditor extends React.Component {
   copyButton() {
     const currentState = this.state.markdown;
     const copied = "COPIED!";
-    const notCopied = "Not copied (Because there isn't anything there!)"
+    const alreadyCopied = "You're already copied!"
+    const notCopied = "Not copied.  There wasn't anything there!"
     if (currentState.length > 0 && currentState !== copied && currentState !== notCopied) {
       this.copyToClipBoard("textarea");
       this.setState({
         markdown: copied
+      })
+    } else if (currentState == copied) {
+      this.setState({
+        markdown: alreadyCopied
       })
     } else {
       this.setState({
