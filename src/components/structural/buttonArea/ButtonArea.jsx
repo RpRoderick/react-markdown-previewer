@@ -8,6 +8,11 @@ function ButtonArea(props) {
       <button type="button" className={styles.button} onClick={() => props.clearMarkdown()}>
         Clear
       </button>
+      <div className={styles.message_container}>
+        <div className={styles.message}>
+          {props.message}
+        </div>
+      </div>
       <button type="button" className={styles.button} onClick={() => props.resetMarkdown()}>
         Reset
       </button>
@@ -15,7 +20,8 @@ function ButtonArea(props) {
   );
 }
 
-ButtonArea.propTypes = { 
+ButtonArea.propTypes = {
+  message: PropTypes.string,
   clearMarkdown: PropTypes.func,
   resetMarkdown: PropTypes.func
 }

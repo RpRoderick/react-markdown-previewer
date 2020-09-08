@@ -56,7 +56,8 @@ class MarkdownEditor extends React.Component {
     this.copyButton = this.copyButton.bind(this);
     this.copyToClipBoard = this.copyToClipBoard.bind(this);
     this.state = {
-      markdown: placeholder
+      markdown: placeholder,
+      message: "Welcome!"
     };
   }
 
@@ -66,57 +67,81 @@ class MarkdownEditor extends React.Component {
   }
 
   copyButton() {
-    const currentState = this.state.markdown;
+    const currentMarkdownState = this.state.markdown;
+    const currentMessageState = this.state.message;
     const copied = "COPIED!";
     const alreadyCopied = "You're already copied!"
     const notCopied = "Not copied.  There wasn't anything there!"
-    if (currentState.length > 0 && currentState !== copied && currentState !== notCopied) {
+    const emptyField = "There isn't anything to clear!";
+    const cleared = "CLEARED!";
+    if (currentMarkdownState.length > 0 && currentMarkdownState !== copied && currentMarkdownState !== notCopied) {
       this.copyToClipBoard("textarea");
       this.setState({
-        markdown: copied
+        message: copied
       })
-    } else if (currentState == copied) {
+    } else if (currentMessageState == copied) {
       this.setState({
-        markdown: alreadyCopied
+        message: alreadyCopied
       })
-    } else {
+    } else if (currentMessageState.length <= 0 || currentMessageState == notCopied || currentMessageState == cleared) {
       this.setState({
-        markdown: notCopied
+        message: notCopied
+      })   
+    } else if (currentMessageState == emptyField) {
+      this.setState({
+        message: notCopied
       })   
     }
   }
   
   updateMarkdown(markdown) {
     this.setState({ 
-      markdown 
+      markdown,
+      message: "You are typing..."
     });
   }
   
   clearMarkdown() {
-    this.setState({ 
+    const currentMarkdownState = this.state.markdown;
+    const emptyField = "There isn't anything to clear!";
+    const cleared = "CLEARED!";
+    if (currentMarkdownState.length == 0) {
+      this.setState({
+        message: emptyField
+      })
+    } else if (currentMarkdownState == placeholder || currentMarkdownState.length > 0) {
+      this.setState({
+        message: cleared
+      })
+    }
+    return this.setState({ 
       markdown: "" 
     });
   }
   
   resetMarkdown() {
+    const resetStateMessage = "State is Reset";
     this.setState({ 
-      markdown: placeholder 
+      markdown: placeholder,
+      message: resetStateMessage 
     });
   }
   
     render() {
     const markdown = this.state.markdown;
+    const message = this.state.message;
     return (
       <>
         <div className={styles.markdown_editor_button_area}>
           <ButtonArea 
             clearMarkdown={this.clearMarkdown}
-            resetMarkdown={this.resetMarkdown} />
+            resetMarkdown={this.resetMarkdown}
+            message={message} />
         </div>
         <div className={styles.markdown_editor_text_area}>
           <TextArea 
             updateMarkdown={this.updateMarkdown}
-            markdown={markdown} 
+            markdown={markdown}
             copyButton={this.copyButton} />
         </div>
         <div className={styles.markdown_editor_preview_area}>

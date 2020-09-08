@@ -22,7 +22,7 @@ function TextArea(props) {
 }
 
 TextArea.propTypes = {
-  copyButton: PropTypes.func, 
+  copyButton: PropTypes.func,  
   markdown: PropTypes.string,
   updateMarkdown: PropTypes.func
 }
