@@ -7,44 +7,24 @@
   flex-direction: column;
   justify-content: center;
 
-  .button {
-    min-height: 50px;
-    max-height: 50px;
-    flex: 1;
-    margin: 1.5625rem 0 0;
-    font-size: $font_size_small;
-    background-color: $color_background_main;
-    border: 0;
-    border-radius: $border_radius_button;
-    outline: none;
-    box-shadow: $box_shadow_main;
-
-    &:hover {
-      box-shadow: $box_shadow_main_inverted;
-      transform: scale(1.03);
-    }
-
-    @include breakpoint(medium) {
-      font-size: $font_size_medium;
-    }
-  
-    @include breakpoint(large) {
-      font-size: $font_size_large;
-    }
-  
-    @include breakpoint(wide) {
-      font-size: $font_size_wide;
-    }
+  textarea {
+    display: flex;
   }
 
   .textarea_label {
-    margin: 0 0 1.5625rem;
-    text-align: center;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
   }
 
   .editor {
     display: flex;
-    min-height: 15vh;
+    min-height: 50vh;
     flex: 1;
     font-size: $font_size_small;
     text-align: center;

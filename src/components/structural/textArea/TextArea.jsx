@@ -14,15 +14,11 @@ function TextArea(props) {
           props.updateMarkdown(e.target.value);}}>
         {props.markdown}
       </textarea>
-      <button type="button" onClick={() => props.copyButton()} className={styles.button}>
-        Copy
-      </button>
     </div>
   );
 }
 
 TextArea.propTypes = {
-  copyButton: PropTypes.func,  
   markdown: PropTypes.string,
   updateMarkdown: PropTypes.func
 }

@@ -1,0 +1,71 @@
+@mixin button_block {
+  min-height: 100px;
+  max-height: 100px;
+  flex: 1;
+  margin: 0;
+  font-size: $font_size_small;
+  background-color: $color_background_main;
+  border: 0;
+  border-radius: $border_radius_button;
+  outline: none;
+  box-shadow: $box_shadow_main;
+
+  &:hover {
+    box-shadow: $box_shadow_main_inverted;
+    transform: scale(1.1);
+  }
+
+  @include breakpoint(medium) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_small;
+  }
+
+  @include breakpoint(large) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_large;
+  }
+
+  @include breakpoint(wide) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_wide;
+  }
+}
+
+@mixin button_long {
+  min-height: 50px;
+  max-height: 50px;
+  flex: 1;
+  margin: 0;
+  font-size: $font_size_small;
+  background-color: $color_background_main;
+  border: 0;
+  border-radius: $border_radius_button;
+  outline: none;
+  box-shadow: $box_shadow_main;
+
+  &:hover {
+    box-shadow: $box_shadow_main_inverted;
+    transform: scale(1.1);
+  }
+
+  @include breakpoint(medium) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_small;
+  }
+
+  @include breakpoint(large) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_large;
+  }
+
+  @include breakpoint(wide) {
+    min-height: 50px;
+    max-height: 50px;
+    font-size: $font_size_wide;
+  }
+}

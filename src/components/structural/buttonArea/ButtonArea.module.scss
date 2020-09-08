@@ -1,23 +1,48 @@
 @import 'styles/global/breakpoints.scss';
 @import 'styles/global/variables.scss';
+@import 'styles/global/buttons.scss';
 
 .button_container {
   display: flex;
   flex: 1;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   @include breakpoint(medium) {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   @include breakpoint(large) {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   @include breakpoint(wide) {
-    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .clear_and_reset_button_container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    .clear_button_container {
+      display: flex;
+      flex: 1;
+
+      .button {
+        @include button_block;
+      }
+    }
+
+    .reset_button_container {
+      display: flex;
+      flex: 1;
+      margin: 0 0 0 $margin_main;
+
+      .button {
+        @include button_block;
+      }
+    }
   }
 
   .message_container {
@@ -26,28 +51,24 @@
     min-height: 50px;
     max-height: 50px;
     flex: 1;
-    margin: 1.5625rem 0 0;
+    margin: $margin_main 0;
     font-size: $font_size_small;
     background-color: $color_white;
     border: 0;
     outline: none;
-    order: 3;
     justify-content: center;
     align-items: center;
 
     @include breakpoint(medium) {
-      margin: 0 5%;
-      order: unset;
+      margin: 0 0 0 $margin_main;
     }
   
     @include breakpoint(large) {
-      margin: 0 5%;
-      order: unset;
+      margin: 0 0 0 $margin_main;
     }
   
     @include breakpoint(wide) {
-      margin: 0 5%;
-      order: unset;
+      margin: 0 0 0 $margin_main;
     }
 
     .message {
@@ -55,56 +76,23 @@
     }
   }
 
-  .button {
-    min-width: 100px;
-    max-width: 100px;
-    min-height: 100px;
-    max-height: 100px;
-    flex: 1;
-    font-size: $font_size_small;
-    background-color: $color_background_main;
-    border: 0;
-    border-radius: $border_radius_button;
-    outline: none;
-    box-shadow: $box_shadow_main;
-
-    &:last-of-type {
-      margin: 0 0 0 25%;
-    }
-
-    &:hover {
-      box-shadow: $box_shadow_main_inverted;
-      transform: scale(1.1);
-    }
+  .copy_button_container {
+    display: flex;
 
     @include breakpoint(medium) {
-      min-height: 50px;
-      max-height: 50px;
-      font-size: $font_size_medium;
-
-      &:last-of-type {
-        margin: 0;
-      }
+      margin: 0 0 0 $margin_main;
     }
-  
-    @include breakpoint(large) {
-      min-height: 50px;
-      max-height: 50px;
-      font-size: $font_size_large;
 
-      &:last-of-type {
-        margin: 0;
-      }
+    @include breakpoint(large) {
+      margin: 0 0 0 $margin_main;
     }
   
     @include breakpoint(wide) {
-      min-height: 50px;
-      max-height: 50px;
-      font-size: $font_size_wide;
+      margin: 0 0 0 $margin_main;
+    }
 
-      &:last-of-type {
-        margin: 0;
-      }
+    .button {
+      @include button_long;
     }
   }
 }

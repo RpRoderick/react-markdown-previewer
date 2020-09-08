@@ -71,8 +71,8 @@ class MarkdownEditor extends React.Component {
     const currentMessageState = this.state.message;
     const copied = "COPIED!";
     const alreadyCopied = "You're already copied!"
-    const notCopied = "Not copied.  There wasn't anything there!"
-    const emptyField = "There isn't anything to clear!";
+    const notCopied = "Nothing to Copy!"
+    const emptyField = "Nothing to Clear!";
     const cleared = "CLEARED!";
     if (currentMarkdownState.length > 0 && currentMarkdownState !== copied && currentMarkdownState !== notCopied) {
       this.copyToClipBoard("textarea");
@@ -103,7 +103,7 @@ class MarkdownEditor extends React.Component {
   
   clearMarkdown() {
     const currentMarkdownState = this.state.markdown;
-    const emptyField = "There isn't anything to clear!";
+    const emptyField = "Nothing to clear!";
     const cleared = "CLEARED!";
     if (currentMarkdownState.length == 0) {
       this.setState({
@@ -136,18 +136,19 @@ class MarkdownEditor extends React.Component {
           <ButtonArea 
             clearMarkdown={this.clearMarkdown}
             resetMarkdown={this.resetMarkdown}
-            message={message} />
-        </div>
-        <div className={styles.markdown_editor_text_area}>
-          <TextArea 
-            updateMarkdown={this.updateMarkdown}
-            markdown={markdown}
+            message={message}
             copyButton={this.copyButton} />
         </div>
-        <div className={styles.markdown_editor_preview_area}>
-          <PreviewArea 
-            markdown={markdown}  
-          />
+        <div className={styles.markdown_editor_field_container}>
+          <div className={styles.markdown_editor_text_area}>
+            <TextArea 
+              updateMarkdown={this.updateMarkdown}
+              markdown={markdown} />
+          </div>
+          <div className={styles.markdown_editor_preview_area}>
+            <PreviewArea 
+              markdown={markdown} />
+          </div>
         </div>
       </>
     );
